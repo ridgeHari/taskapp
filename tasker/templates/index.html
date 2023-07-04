@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Contact List</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Contact List</h1>
     <ul>
-        {% for contact in contacts %}
-            <li>{{ contact.first_name }} {{ contact.last_name }}</li>
-        {% endfor %}
+      {% for row in contacts %}
+      <li>
+        ID: {{ row.0 }}<br />
+        FirstName: {{ row.1 }}<br />
+        LastName: {{ row.2 }}<br />
+        Mobile: {{ row.3 }}
+      </li>
+      <br />
+      {% endfor %}
     </ul>
-</body>
+  </body>
 </html>

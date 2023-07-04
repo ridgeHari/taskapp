@@ -1,6 +1,9 @@
 # Use the official Python base image
 FROM python:3.9
 
+# Install the SQLite client
+RUN apt-get update && apt-get install -y sqlite3
+
 # Set the working directory inside the container
 WORKDIR /app
 
